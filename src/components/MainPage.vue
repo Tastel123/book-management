@@ -1,25 +1,42 @@
 <template>
     <div class="main-content">
-        <Main></Main>
         <Aside></Aside>
+        <Main></Main>
+        <div class="container"></div>
         <router-view></router-view>
-        hivuiviub
     </div>
 </template>
 
 <script>
-import Main from '@/components/common/Main'
 import Aside from '@/components/common/Aside'
+import Main from '@/components/common/Main'
 export default {
     data() {
         return {
-            Main,
-            Aside
         }
     },
+    components: {
+        Aside,
+        Main
+    }
 }
 </script>
 
-<style>
+<style scoped>
+.main-content{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 
+}
+Main{
+    margin-left: 243px;
+    height: 70px;
+}
+.container{
+    width: 80%;
+    height: 100%;
+    padding-top: 62px;
+    margin-left: 243px;
+}
 </style>
